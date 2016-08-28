@@ -11,7 +11,7 @@
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C30F2B2F0E42135C003A17A7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C30F2B2E0E42135C003A17A7 /* home.png */; };
 		C33A4ABB0E34E92D00277D64 /* CHMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C33A4ABA0E34E92D00277D64 /* CHMDocument.m */; };
 		C33A4AE10E34EA7700277D64 /* CHMDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33A4ADF0E34EA7700277D64 /* CHMDocument.xib */; };
@@ -42,19 +42,27 @@
 		C3DB252F0E2DD646000E5A20 /* ICHMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB252E0E2DD646000E5A20 /* ICHMApplication.m */; };
 		C3ED1D870E4307F500C1B93A /* CHMTextEncodingMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1D860E4307F500C1B93A /* CHMTextEncodingMenu.m */; };
 		C3ED1DA00E43106D00C1B93A /* textencoding.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1D9F0E43106D00C1B93A /* textencoding.plist */; };
-		FE781B161D72C45400DF89BA /* chm_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE781B131D72C45400DF89BA /* chm_lib.framework */; };
-		FE781B171D72C45400DF89BA /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE781B141D72C45400DF89BA /* PSMTabBarControl.framework */; };
-		FE781B181D72C45400DF89BA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE781B151D72C45400DF89BA /* Sparkle.framework */; };
+		FE781B1A1D72C8B600DF89BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE781B191D72C8B600DF89BA /* Images.xcassets */; };
+		FE99C4FC1D72FD8D004520C2 /* PSMTabBarControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE99C4F91D72FD8D004520C2 /* PSMTabBarControl.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FE99C4FD1D72FD8D004520C2 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE99C4FA1D72FD8D004520C2 /* Sparkle.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FE99C4FE1D72FD8D004520C2 /* chm_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE99C4FB1D72FD8D004520C2 /* chm_lib.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FE99C4FF1D73032C004520C2 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = FE99C4FA1D72FD8D004520C2 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE99C5001D730336004520C2 /* chm_lib.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = FE99C4FB1D72FD8D004520C2 /* chm_lib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE99C5011D73033D004520C2 /* PSMTabBarControl.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = FE99C4F91D72FD8D004520C2 /* PSMTabBarControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C35B9BE70E39E4AB00A63BC3 /* CopyFiles */ = {
+		C35B9BE70E39E4AB00A63BC3 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FE99C5011D73033D004520C2 /* PSMTabBarControl.framework in Copy Files */,
+				FE99C5001D730336004520C2 /* chm_lib.framework in Copy Files */,
+				FE99C4FF1D73032C004520C2 /* Sparkle.framework in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -146,9 +154,10 @@
 		C3FF6BAE0E585DCF00F9EBC2 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Spanish; path = Spanish.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C3FF6BAF0E585DD600F9EBC2 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Spanish; path = Spanish.lproj/CHMWebView.xib; sourceTree = "<group>"; };
 		C3FF6BB00E585DDD00F9EBC2 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Spanish; path = Spanish.lproj/Bookmark.xib; sourceTree = "<group>"; };
-		FE781B131D72C45400DF89BA /* chm_lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = chm_lib.framework; path = OtherFrameworks/chm_lib.framework; sourceTree = "<group>"; };
-		FE781B141D72C45400DF89BA /* PSMTabBarControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSMTabBarControl.framework; path = OtherFrameworks/PSMTabBarControl.framework; sourceTree = "<group>"; };
-		FE781B151D72C45400DF89BA /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = OtherFrameworks/Sparkle.framework; sourceTree = "<group>"; };
+		FE781B191D72C8B600DF89BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iChm/Images.xcassets; sourceTree = "<group>"; };
+		FE99C4F91D72FD8D004520C2 /* PSMTabBarControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSMTabBarControl.framework; path = Frameworks/PSMTabBarControl.framework; sourceTree = "<group>"; };
+		FE99C4FA1D72FD8D004520C2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		FE99C4FB1D72FD8D004520C2 /* chm_lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = chm_lib.framework; path = Frameworks/chm_lib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				FE99C4FE1D72FD8D004520C2 /* chm_lib.framework in Frameworks */,
+				FE99C4FD1D72FD8D004520C2 /* Sparkle.framework in Frameworks */,
 				C3DB24CE0E2DB849000E5A20 /* WebKit.framework in Frameworks */,
-				FE781B161D72C45400DF89BA /* chm_lib.framework in Frameworks */,
-				FE781B171D72C45400DF89BA /* PSMTabBarControl.framework in Frameworks */,
-				FE781B181D72C45400DF89BA /* Sparkle.framework in Frameworks */,
+				FE99C4FC1D72FD8D004520C2 /* PSMTabBarControl.framework in Frameworks */,
 				C3907F3D0EC005430018AA80 /* Quartz.framework in Frameworks */,
 				C3907F690EC005B30018AA80 /* ApplicationServices.framework in Frameworks */,
 			);
@@ -172,9 +181,9 @@
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE781B131D72C45400DF89BA /* chm_lib.framework */,
-				FE781B141D72C45400DF89BA /* PSMTabBarControl.framework */,
-				FE781B151D72C45400DF89BA /* Sparkle.framework */,
+				FE99C4F91D72FD8D004520C2 /* PSMTabBarControl.framework */,
+				FE99C4FA1D72FD8D004520C2 /* Sparkle.framework */,
+				FE99C4FB1D72FD8D004520C2 /* chm_lib.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -255,6 +264,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE781B191D72C8B600DF89BA /* Images.xcassets */,
 				C33D3B1B0E4F253D00F7B487 /* xibs */,
 				C3C082260E4557F900D58E19 /* images */,
 				C3ED1D9F0E43106D00C1B93A /* textencoding.plist */,
@@ -326,7 +336,7 @@
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
-				C35B9BE70E39E4AB00A63BC3 /* CopyFiles */,
+				C35B9BE70E39E4AB00A63BC3 /* Copy Files */,
 				C3806F110E5D0948005E7585 /* ShellScript */,
 			);
 			buildRules = (
@@ -375,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33DE67D0E40C40A009FF1F4 /* highlight.js in Resources */,
+				FE781B1A1D72C8B600DF89BA /* Images.xcassets in Resources */,
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
@@ -529,11 +540,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(PROJECT_DIR)/OtherFrameworks",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -556,11 +570,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(PROJECT_DIR)/OtherFrameworks",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
