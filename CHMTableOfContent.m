@@ -202,24 +202,30 @@ NULL, /* getParameterEntity */
 
 - (id)initWithData:(NSData *)data encodingName:(NSString*)encodingName
 {
-	itemStack = [[NSMutableArray alloc] init];
-	pageList = [[NSMutableArray alloc] init];
-	rootItems = [[LinkItem alloc] initWithName:@"root"	Path:@"/"];
-	curItem = rootItems;
-	
-	if(!encodingName || [encodingName length] == 0)
-		encodingName = @"iso_8859_1";
-	
-	htmlDocPtr doc = htmlSAXParseDoc( (xmlChar *)[data bytes], [encodingName UTF8String],
-									  &saxHandler, self);
-	[itemStack release];
-	
-	if( doc ) {
-	    xmlFreeDoc( doc );
-	}
-	[rootItems purge];
-	[rootItems enumerateItemsWithSEL:@selector(addToPageList:) ForTarget:self];
-	return self;
+    itemStack = [[NSMutableArray alloc] init];
+    pageList = [[NSMutableArray alloc] init];
+    rootItems = [[LinkItem alloc] initWithName:@"root"	Path:@"/"];
+    curItem = rootItems;
+    
+    if(!encodingName || [encodingName length] == 0)
+        encodingName = @"iso_8859_1";
+    
+    @try {
+        htmlDocPtr doc = htmlSAXParseDoc( (xmlChar *)[data bytes], [encodingName UTF8String],
+                                         &saxHandler, self);
+        [itemStack release];
+        
+        if( doc ) {
+            xmlFreeDoc( doc );
+        }
+        [rootItems purge];
+        [rootItems enumerateItemsWithSEL:@selector(addToPageList:) ForTarget:self];
+        
+    } @catch (NSException *exception) {
+        NSLog(@"htmlSAXParseDoc paser error:%@", exception);
+    }
+    
+    return self;
 }
 
 - (id)initWithTOC:(CHMTableOfContent*)toc filterByPredicate:(NSPredicate*)predicate
